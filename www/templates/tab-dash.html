@@ -1,0 +1,29 @@
+<ion-view cache-view="false" view-title="Mijn account" class="page-dash title title-center">
+  <ion-content>
+    <h2>
+      Welkom terug {{user.username}}!
+    </h2>
+    <ion-list>
+      <div class="item item-divider">Mijn gegevens</div>
+      <ion-item>
+        <p>Kluspunten: {{user.kluspunten}}</p>
+      </ion-item>
+      <ion-item>
+        <p>Openstaande saldo: {{user.saldo | currency: '€'}}</p>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <div class="item item-divider">Mijn klussen</div>
+      <ion-item ng-repeat="task in tasks" class="item item-icon-right">
+        <i class="icon ion-trash-a" ng-click="resetTask(task)"></i>
+        <i class="icon ion-information-circled" ng-click="showTaskDetails(task)"></i>
+        <p>{{task.title}}</p>
+        <p>{{task.date}}</p>
+      </ion-item>
+    </ion-list>
+    <div class="full-width">
+      <button class="button button-calm custom-add-button icon icon-left ion-android-exit" ng-click="logOut()">Uitloggen</button>
+    </div>
+  </ion-content>
+</ion-view>

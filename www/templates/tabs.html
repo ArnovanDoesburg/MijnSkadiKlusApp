@@ -1,0 +1,19 @@
+<ion-tabs class="tabs-icon-bottom tabs-color-active-positive">
+
+  <ion-tab title="Account" icon-off="ion-ios-body-outline" icon-on="ion-ios-body" href="#/tab/dash">
+    <ion-nav-view name="tab-dash"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="Klussen" icon-off="ion-ios-list-outline" icon-on="ion-ios-list" href="#/tab/tasks">
+    <ion-nav-view name="tab-tasks"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="Scoreboard" icon-off="ion-ios-star-outline" icon-on="ion-ios-star" href="#/tab/scoreboard">
+    <ion-nav-view name="tab-scoreboard"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab ng-if="isAdmin" title="Admin" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/admin">
+    <ion-nav-view name="tab-admin"></ion-nav-view>
+  </ion-tab>
+
+</ion-tabs>

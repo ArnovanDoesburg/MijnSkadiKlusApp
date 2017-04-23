@@ -1,0 +1,11 @@
+<ion-view cache-view="false" class="page-tasks" view-title="Klussen">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="task in tasks" type="item-text-wrap" href="#/tab/tasks/{{task.id}}">
+        <h2>{{task.title}}</h2>
+        <p>{{task.date}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

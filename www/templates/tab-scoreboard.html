@@ -1,0 +1,11 @@
+<ion-view view-title="Scoreboard" class="page-scoreboard">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="user in users | orderBy: 'points' : true" class="scorelist">
+        <h2 class="custom-position">{{$index + 1}}</h2>
+        <h2>{{user.username}}</h2>
+        <p>Score: {{user.points}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,111 @@
+.item-avatar, .item-avatar .item-content, .item-avatar-left, .item-avatar-left .item-content {
+  padding-left: 20px;
+}
+
+.custom-roles {
+  padding: 20px 0 0 20px;
+  display: inherit;
+}
+
+.custom-roles input[type="radio"] {
+
+}
+
+.bar-stable.bar.bar-header {
+  background-color: #014c8f;
+}
+
+.bar-stable.bar.bar-header .title {
+  color: #ffffff;
+  text-align: center;
+}
+
+.custom-position {
+  padding: 10px 20px 0 5px;
+  float: left;
+}
+
+ion-tabs.tabs-striped.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-striped.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-striped.tabs-color-active-positive .tab-item.activated {
+  border-color: #014c8f;
+  color: #014c8f;
+}
+
+.bar-stable .button.button-clear {
+  color: #ffffff;
+}
+
+.logo {
+  width: 360px;
+  height: auto;
+  margin: -10px 0 -10px -10px;
+}
+
+.custom-button-bar .button:first-child {
+  border-width: 1px 1px 1px 1px;
+}
+
+.page-dash h2, .page-admin h3 {
+  color: #222;
+  font-weight: 500;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0 0;
+}
+
+.page-admin textarea {
+  overflow: hidden;
+}
+
+.full-width {
+  width: 100%;
+  float: left;
+}
+
+.button.custom-add-button {
+  display: flex;
+  float: right;
+  margin-right: 3%;
+}
+
+.button.button-calm {
+  background-color: #014c8f;
+}
+
+.position-isAdmin {
+  margin-bottom: 15px;
+}
+.position-isAdmin p {
+  float: left;
+  margin: 6px 0 0 25px;
+}
+.position-isAdmin .isAdmin-toggle {
+  border: 0;
+  float: right;
+  margin-right: 20px;
+  background: transparent;
+}
+
+.custom-add-button.ion-android-exit {
+  margin-top: 10px;
+}
+
+.list:last-child {
+  padding-top: 0;
+}
+
+.button.button-positive {
+  background-color: #014c8f;
+}
+
+.icon.ion-cash {
+  margin-right: 40px;
+}
+
+.page-detail .date {
+  color: #8f8f8f;
+}
+
+.icon.ion-information-circled {
+  margin-right: 40px;
+}

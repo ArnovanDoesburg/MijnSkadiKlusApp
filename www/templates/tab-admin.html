@@ -1,0 +1,78 @@
+<ion-view view-title="Admin" class="page-admin">
+  <ion-content>
+    <div class="button-bar custom-button-bar">
+      <button class="button" ng-click="goToTab('users')">Gebruikers</button>
+      <button class="button" ng-click="goToTab('tasks')">Taken</button>
+    </div>
+    <div class="button-bar custom-button-bar">
+      <button class="button" ng-click="goToTab('users-list')">Gebruikerslijst</button>
+    </div>
+    <div ng-if="currentTab === 'users'">
+      <div class="list list-inset">
+        <div class="item item-divider">Gebruiker toevoegen</div>
+        <label class="item item-input">
+          <input type="text" placeholder="Gebruikersnaam" ng-model="newUser.username">
+        </label>
+        <label class="item item-input">
+          <input type="password" placeholder="Wachtwoord" ng-model="newUser.password">
+        </label>
+      </div>
+      <div class="full-width position-isAdmin">
+        <p>Heeft deze gebruiker admin rechten?</p>
+        <label class="isAdmin-toggle toggle item item-input">
+          <input type="checkbox" ng-model="newUser.role" ng-true-value="'admin'" ng-false-value="'user'">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+      <!--<label class="custom-roles">-->
+        <!--<input name="role" type="radio" value="admin" ng-model="newUser.role"/>-->
+        <!--Administrator-->
+      <!--</label>-->
+      <!--<label class="custom-roles">-->
+        <!--<input name="role" type="radio" value="user" ng-model="newUser.role"/>-->
+        <!--Gebruiker-->
+      <!--</label>-->
+      <div class="full-width">
+        <button class="button button-calm custom-add-button icon icon-left ion-plus-circled" ng-click="CreateUser()">
+          Gebruiker toevoegen
+        </button>
+      </div>
+    </div>
+
+    <div ng-if="currentTab === 'users-list'">
+      <ion-list>
+        <ion-item ng-repeat="user in users" class="item item-icon-right">
+          <i class="icon ion-cash" ng-click="resetMoney(user)"></i>
+          <i class="icon ion-trash-a" ng-click="showConfirm(user)"></i>
+          <p>{{user.username}}</p>
+          <p>Saldo: {{user.saldo | currency: '€'}}</p>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <div ng-if="currentTab === 'tasks'">
+      <div class="list list-inset">
+        <div class="item item-divider">Klus aanmaken</div>
+        <label class="item item-input">
+          <input type="text" placeholder="Titel" ng-model="newTask.title">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="20/04/2017" ng-model="newTask.date">
+        </label>
+        <label class="item item-input">
+          <textarea rows="4" placeholder="Omschrijving" ng-model="newTask.description"></textarea>
+          <!--<input type="text" placeholder="Omschrijving" ng-model="newTask.description">-->
+        </label>
+        <label class="item item-input">
+          <input type="number" placeholder="Beloningspunten" ng-model="newTask.reward">
+        </label>
+      </div>
+      <button class="button button-calm custom-add-button icon icon-left ion-plus-circled" ng-click="CreateTask()">Taak
+        toevoegen
+      </button>
+    </div>
+
+  </ion-content>
+</ion-view>
